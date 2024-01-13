@@ -3,13 +3,14 @@
 "use strict";
 
 const except = (dict, ...exceptions) => {
+  const copyDict = {};
   const keys = Object.keys(dict);
-  for(const key of keys) {
-    if(exceptions.includes(key)) {
-      delete dict[key];
+  for (const key of keys) {
+    if (!exceptions.includes(key)) {
+      copyDict[key] = dict[key];
     }
   }
-  return dict;
+  return copyDict;
 };
 
 module.exports = except;

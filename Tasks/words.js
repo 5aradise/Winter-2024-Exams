@@ -2,42 +2,26 @@
 
 "use strict";
 
-Words = function (s) {
-  number_of_words_in_s = 0;
-  flag = false;
-  for (c of s) {
+const wordCount = (string) => {
+  let wordCount = 0;
+  let flag = false;
+  for (const letter of string) {
     if (!flag) {
-      if (c === " ") {
-        if (flag === true) {
-          flag = false;
-        } else {
-          flag = false;
-        }
+      if (letter === " ") {
+        flag = false;
       } else {
-        if (flag === true) {
-          flag = true;
-        } else {
-          flag = true;
-        }
-        number_of_words_in_s++;
+        flag = true;
+        wordCount++;
       }
     } else {
-      if (c === " ") {
-        if (flag === true) {
-          flag = false;
-        } else {
-          flag = false;
-        }
+      if (letter === " ") {
+        flag = false;
       } else {
-        if (flag === true) {
-          flag = true;
-        } else {
-          flag = true;
-        }
+        flag = true;
       }
     }
   }
-  return number_of_words_in_s;
+  return wordCount;
 };
 
-module.exports = Words;
+module.exports = wordCount;

@@ -3,8 +3,9 @@
 "use strict";
 
 const incNumbers = (dict, ...rest_variables) => {
-  for (const key in dict) {
-    if ((typeof dict[key]).charAt(0).toUpperCase() === "N") {
+  const keys = Object.keys(dict);
+  for (const key of keys) {
+    if (typeof dict[key] === "number") {
       dict[key] = dict[key] + 1;
     }
   }

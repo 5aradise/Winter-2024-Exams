@@ -4,16 +4,11 @@
 
 const parseIp = (ip) => {
   const ipNums = [];
-  if (ip === "") return;
-  else {
-    const ipNumStrs = ip.split(".");
-    if (ipNumStrs.length !== 4) return;
-    let i = 0;
-    for (const ipNumStr of ipNumStrs) {
-      ipNums[i] = parseInt(ipNumStr);
-      if (isNaN(ipNums[i])) return;
-      i++;
-    }
+  const ipNumStrs = ip.split(".");
+  if (ipNumStrs.length !== 4) return;
+  for (const ipNumStr of ipNumStrs) {
+    ipNums.push(parseInt(ipNumStr));
+    if (isNaN(ipNums[ipNums.length-1])) return;
   }
   return ipNums;
 };

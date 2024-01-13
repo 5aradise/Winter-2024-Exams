@@ -2,20 +2,20 @@
 
 "use strict";
 
-Parseip = (i) => {
-  a = [];
-  if (i === "") return;
+const parseIp = (ip) => {
+  const ipNums = [];
+  if (ip === "") return;
   else {
-    B = i.split(".");
-    if (B.length != 4) return;
-    j = 0;
-    for (const b of B) {
-      a[j] = parseInt(b);
-      if (isNaN(a[j])) return;
-      j++;
+    const ipNumStrs = ip.split(".");
+    if (ipNumStrs.length !== 4) return;
+    let i = 0;
+    for (const ipNumStr of ipNumStrs) {
+      ipNums[i] = parseInt(ipNumStr);
+      if (isNaN(ipNums[i])) return;
+      i++;
     }
   }
-  return a;
+  return ipNums;
 };
 
-module.exports = Parseip;
+module.exports = parseIp;

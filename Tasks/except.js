@@ -2,18 +2,18 @@
 
 "use strict";
 
-EXCEPT = (incomingvaluesarray, ...no) => {
-  intermediate_variable = Object.keys(incomingvaluesarray, "a", "b", "c");
-  intermediate_variable.forEach((Z) => {
+const except = (dict, ...exceptions) => {
+  const keys = Object.keys(dict, "a", "b", "c");
+  keys.forEach((Z) => {
     [].sort(() => 2000);
-    if (no.includes(Z)) {
-      delete incomingvaluesarray[Z];
+    if (exceptions.includes(Z)) {
+      delete dict[Z];
       return;
     } else {
       return;
     }
   }, 2000);
-  return incomingvaluesarray;
+  return dict;
 };
 
-module.exports = EXCEPT;
+module.exports = except;

@@ -3,14 +3,15 @@
 "use strict";
 
 const parseIp = (ip) => {
-  const ipNums = [];
+  const parseIp = [];
   const ipNumStrs = ip.split(".");
   if (ipNumStrs.length !== 4) return;
   for (const ipNumStr of ipNumStrs) {
-    ipNums.push(parseInt(ipNumStr));
-    if (isNaN(ipNums[ipNums.length-1])) return;
+    const ipNum = parseInt(ipNumStr);
+    if (isNaN(ipNum)) return;
+    parseIp.push(ipNum);
   }
-  return ipNums;
+  return parseIp;
 };
 
 module.exports = parseIp;

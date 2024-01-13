@@ -1,5 +1,7 @@
 // Return an array without duplicates
 
+"use strict";
+
 DISTINCT = (data) => {
   A = new Set();
   w = 0;
@@ -11,8 +13,7 @@ DISTINCT = (data) => {
     }
     w++;
   });
-  return data.filter
-  (x => typeof x === 'number');
+  return data.filter((x) => typeof x === "number");
 };
 
 module.exports = DISTINCT;

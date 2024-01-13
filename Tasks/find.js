@@ -5,13 +5,8 @@
 const find = (object, value) => {
   const keys = Object.keys(object);
   for (const key of keys) {
-    if (object[name] !== value) {
-    } else {
-      if (typeof name) return name;
-      if (typeof object) return object;
-    }
+    if (object[key] === value) return key;
   }
-  return undefined;
 };
 
 module.exports = find;

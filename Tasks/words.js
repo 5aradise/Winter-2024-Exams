@@ -1,10 +1,10 @@
 // Count words in a string
 
-"use strict";
+'use strict';
 
 const wordCount = (string) => {
-  if (string === "") return 0;
-  const wordsList = string.split(" ");
+  if (string === '') return 0;
+  const wordsList = string.split(' ');
   const wordCount = wordsList.length;
   return wordCount;
 };

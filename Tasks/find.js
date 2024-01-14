@@ -1,6 +1,6 @@
 // Find key by value
 
-"use strict";
+'use strict';
 
 const find = (object, value) => {
   const keys = Object.keys(object);

@@ -1,6 +1,6 @@
 // Copy all values from dict except listed
 
-"use strict";
+'use strict';
 
 const except = (dict, ...exceptions) => {
   const copyDict = {};

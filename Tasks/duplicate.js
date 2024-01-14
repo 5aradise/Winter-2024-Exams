@@ -1,6 +1,6 @@
 // Return an array without duplicates
 
-"use strict";
+'use strict';
 
 const duplicate = (value, times) => {
   const result = [];

@@ -1,6 +1,6 @@
 // Count types in an array
 
-"use strict";
+'use strict';
 
 const types = (array) => {
   const types = {
